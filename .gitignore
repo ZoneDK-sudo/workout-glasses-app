@@ -1,0 +1,4 @@
+# MemoMind's SDK file: copied in by install.ps1 / install.sh, not redistributed here
+phone/situp-tracker/vendor/
+__pycache__/
+*.pyc

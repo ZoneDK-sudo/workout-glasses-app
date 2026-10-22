@@ -1,0 +1,14 @@
+{
+  "id": "com.fox89.situp-counter",
+  "name": "Workout Counter",
+  "version": 14,
+  "abi_version": 256,
+  "provides": {
+    "protocols": [
+      {
+        "id": "fox89.situp-sync",
+        "version": "2.0"
+      }
+    ]
+  }
+}

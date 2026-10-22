@@ -1,0 +1,53 @@
+{
+  "id": "com.fox89.situp-tracker",
+  "name": "Workout Tracker",
+  "version": "0.7.1",
+  "entry": "index.html",
+  "bridgeVersion": "2.0",
+  "permissions": [
+    {
+      "name": "storage",
+      "required": true
+    },
+    {
+      "name": "device.messaging",
+      "required": true,
+      "scope": {
+        "channels": [
+          17991,
+          17992
+        ]
+      }
+    },
+    {
+      "name": "device.events",
+      "required": false,
+      "scope": {
+        "types": [
+          "connection"
+        ]
+      }
+    },
+    {
+      "name": "device.info",
+      "required": false
+    },
+    {
+      "name": "audio.playback",
+      "required": false
+    }
+  ],
+  "deviceRequirements": {
+    "preferredPluginId": "com.fox89.situp-counter",
+    "requiredPluginId": "com.fox89.situp-counter",
+    "minPluginVersion": "14",
+    "protocols": [
+      {
+        "id": "fox89.situp-sync",
+        "minVersion": "2.0"
+      }
+    ]
+  },
+  "schemaVersion": 2,
+  "permissionPolicyVersion": 1
+}

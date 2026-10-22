@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#0b0f0c">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'; object-src 'none'; frame-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>Workout Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Workout Tracker</h1>
+      <p id="status" class="status"><span>Starting…</span></p>
+    </header>
+
+    <button id="sound-banner" class="sound-banner" type="button" hidden>🔊 Tap to turn on sound</button>
+
+    <nav class="tabs" id="tabs" aria-label="Exercises"></nav>
+
+    <section class="card hero">
+      <p class="label" id="today-label">Today</p>
+      <p class="big" id="today">0</p>
+      <p class="sub" id="today-note">No reps yet today</p>
+    </section>
+
+    <div class="row">
+      <section class="card">
+        <p class="label">🔥 Streak</p>
+        <p class="mid" id="streak">0</p>
+        <p class="sub" id="streak-note">days in a row</p>
+      </section>
+      <section class="card">
+        <p class="label">🏆 High score</p>
+        <p class="mid" id="best">—</p>
+        <p class="sub" id="best-date">one session</p>
+      </section>
+    </div>
+
+    <section class="card">
+      <p class="label" id="chart-label">Last 14 days</p>
+      <div class="chart" id="chart" aria-label="Reps per day for the last 14 days"></div>
+    </section>
+
+    <section class="card">
+      <div class="label-row">
+        <p class="label">Glasses animation</p>
+        <button id="sound" class="switch" type="button" role="switch" aria-checked="true">🔊 Sounds <span>On</span></button>
+      </div>
+      <div class="styles" id="styles" role="group" aria-label="Choose the animation shown on your glasses"></div>
+      <div class="sound-row">
+        <p class="sub" id="sound-status">Sounds play from this phone.</p>
+        <button id="test-sound" class="switch" type="button">Test sound</button>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="label-row">
+        <p class="label" id="range-label">Setup</p>
+        <button id="recalibrate" class="switch" type="button">Recalibrate</button>
+      </div>
+      <p class="mid" id="range">Not set up</p>
+      <p class="sub" id="range-note"></p>
+    </section>
+
+    <section class="card">
+      <p class="label">Totals</p>
+      <dl class="totals">
+        <div><dt id="total-label">All-time reps</dt><dd id="total">0</dd></div>
+        <div><dt>Best day</dt><dd id="best-day">—</dd></div>
+        <div><dt>Longest streak</dt><dd id="longest">0 days</dd></div>
+        <div><dt>All workouts, ever</dt><dd id="active">0</dd></div>
+      </dl>
+    </section>
+
+    <button id="reset" class="danger" type="button">Reset all history</button>
+  </main>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
